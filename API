@@ -1,0 +1,16 @@
+import requests
+
+#from secret import key
+#city=str(input("Enter city name: "))
+#url="api.openweathermap.org/data/2.5/weather?q="+city+ "appid="+key
+#response=r.geturl()
+#print(response.status_code)
+#print(response.json())
+
+#step2 : Send request and get response object
+result = requests.get('https://developer.nrel.gov/api/alt-fuel-stations/v1.json?fuel_type=E85,ELEC&state=CA&limit=2&api_key='')#generate key 
+
+#step3 : Get the status code.. returns an integer on success
+result.status_code
+
+result.text
