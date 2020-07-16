@@ -1,0 +1,28 @@
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+
+'''url = "http://quotes.toscrape.com/"
+html = urlopen(url)
+
+soup = BeautifulSoup(html, "html.parser")
+type(soup)
+
+all_links = soup.find_all('div',{'class' : 'quote'})
+str_cells = str(all_links)
+cleartext = BeautifulSoup(str_cells, "html.parser").get_text()
+
+print(cleartext)'''
+
+# scrape names of all the books on the page (e-commerce replica)
+
+url = "http://books.toscrape.com/"
+html = urlopen(url)
+
+soup = BeautifulSoup(html, "html.parser")
+type(soup)
+
+all_links = soup.find_all('h3')
+str_cells = str(all_links)
+cleartext = BeautifulSoup(str_cells, "html.parser").get_text()
+
+print(cleartext)
