@@ -1,0 +1,10 @@
+import PyPDF2 as p
+
+file = open("\\About_Python.pdf", "rb") # instertb the location of the file
+pd = p.PdfFileReader(file)
+
+#read page 1
+x =pd.getPage(0)
+y =pd.getPage(1)
+print(x.extractText())
+#print(y.extractText())
